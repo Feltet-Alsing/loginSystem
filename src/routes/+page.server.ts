@@ -1,4 +1,3 @@
-
 import type { Actions } from "./$types";
 import { pool } from "$lib/db/db.js";
 import { createSession, getUserFromSession } from "$lib/db/sessionsFunctions.js";
@@ -61,7 +60,7 @@ export const actions = {
         cookies.set("session_id", sessionId, {
             path: "/",
             httpOnly: true,
-            secure: false, // Set to true in production with HTTPS
+            secure: process.env.NODE_ENV === 'production',
             sameSite: "lax",
             maxAge: 60 * 60 * 24 * 7 // 7 days
         });
