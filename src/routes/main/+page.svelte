@@ -19,20 +19,19 @@
 	</div>
 
 	<div class="content">
-		<CreateNote />
-
 		<div class="notes-section">
 			<h2>Your Notes</h2>
 			<div class="notes-grid">
 				{#each await getNotes() as note}
-					<a href="/main/notes/{note.notes_id}"
-						><div class="note-card">
+					<a href="/main/notes/{note.notes_id}">
+						<div class="note-card">
 							<h3>{note.title}</h3>
 							<p class="note-content">{note.content}</p>
 							<span class="note-date">{new Date(note.created_at).toLocaleDateString()}</span>
-						</div></a
-					>
+						</div>
+					</a>
 				{/each}
+				<CreateNote />
 			</div>
 		</div>
 	</div>

@@ -39,7 +39,7 @@
 		max-width: 420px;
 		padding: 20px;
 		margin: auto;
-		margin-top: 200px;
+		margin-top: 50px;
 	}
 
 	.card {
