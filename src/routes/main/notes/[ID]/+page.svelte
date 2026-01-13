@@ -418,5 +418,13 @@
 		.note-content {
 			font-size: 15px;
 		}
+		.flex-box {
+			display: flex;
+			gap: 20px;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-direction: column;
+			margin-bottom: 12px;
+		}
 	}
 </style>
